@@ -4,7 +4,7 @@ export default {
   title: 'Pet',
   fields: [
     {
-      name: 'Type',
+      name: 'type',
       type: 'string',
       title: 'Type'
     },

@@ -1,3 +1,3 @@
-import pet from '../schemaTypes/pet'
+import sectionData from './sectionData'
 
-export const schemaTypes = [pet]
+export const schemaTypes = [sectionData]

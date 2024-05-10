@@ -17,19 +17,26 @@ export default {
       name: 'subMenu',
       type: 'object',
       title: 'Submenu',
-      of: [
+      fields: [
         {
-          type: 'object',
-          fields: [
+          name: 'subMenuItem',
+          type: 'array',
+          title: 'Submenu Item',
+          of: [
             {
-              name: 'label',
-              type: 'string',
-              title: 'Label',
-            },
-            {
-              name: 'link',
-              type: 'string',
-              title: 'Link',
+              type: 'object',
+              fields: [
+                {
+                  name: 'label',
+                  type: 'string',
+                  title: 'Label',
+                },
+                {
+                  name: 'link',
+                  type: 'string',
+                  title: 'Link',
+                },
+              ],
             },
           ],
         },

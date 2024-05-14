@@ -1,8 +1,13 @@
+import {orderRankField, orderRankOrdering} from '@sanity/orderable-document-list'
+
 export default {
   name: 'sectionData',
   type: 'document',
   title: 'SectionData',
+  orderings: [orderRankOrdering],
   fields: [
+    orderRankField({type: 'sectionData', newItemPosition: 'before'}),
+
     {
       name: 'type',
       type: 'string',

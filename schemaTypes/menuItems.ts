@@ -19,9 +19,9 @@ export default {
       title: 'Link',
     },
     {
-      name: 'subMenu',
-      type: 'subMenu',
-      title: 'Submenu',
+      name: 'subMenuItem',
+      type: 'subMenuItem',
+      title: 'subMenuItem',
     },
   ],
 }

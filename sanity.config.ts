@@ -2,6 +2,7 @@ import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
+import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list'
 
 export default defineConfig({
   name: 'default',
@@ -10,7 +11,18 @@ export default defineConfig({
   projectId: '426kwv4m',
   dataset: 'production',
 
-  plugins: [structureTool(), visionTool()],
+  plugins: [
+    structureTool({
+      structure: (S, context) => {
+        return S.list()
+          .title('Content')
+          .items(
+            schemaTypes.map((type) => orderableDocumentListDeskItem({type: type.name, S, context})),
+          )
+      },
+    }),
+    visionTool(),
+  ],
 
   schema: {
     types: schemaTypes,

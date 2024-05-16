@@ -8,14 +8,14 @@ export default {
         title: 'Label',
         options: {
             list: [
-                {title: 'Facebook', value: 'FB'},
-                {title: 'Instagram', value: 'IG'},
-                {title: 'X', value: 'X'},
-                {title: 'Youtube', value: 'YTB'},
-                {title: 'Pintrest', value: 'PIN'},
-                {title: 'TikTok', value: 'TT'},
-                {title: 'SnapChat', value: 'SNAP'},
-                {title: 'Github', value: 'GH'},
+                {title: 'Facebook', value: 'FaFacebook'},
+                {title: 'Instagram', value: 'FaInstagram'},
+                {title: 'X', value: 'FaXTwitter'},
+                {title: 'Youtube', value: 'FaYoutube'},
+                {title: 'Pintrest', value: 'FaPinterest'},
+                {title: 'TikTok', value: 'FaTiktok'},
+                {title: 'SnapChat', value: 'FaSnapchat'},
+                {title: 'Github', value: 'FaGithub'},
                 
             ]
         }
@@ -24,6 +24,11 @@ export default {
         name: 'url',
         type: 'string',
         title: 'Url',
+      },
+      {
+        name: 'icon',
+        type: 'string',
+        title: 'icon',
       }
     ],
   }

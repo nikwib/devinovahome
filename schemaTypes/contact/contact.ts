@@ -35,6 +35,11 @@ export default {
       ],
     },
     {
+      name: 'pageImage',
+      type: 'image',
+      title: 'Page Image',
+    },
+    {
       name: 'logo',
       type: 'image',
       title: 'Logo',

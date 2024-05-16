@@ -3,7 +3,6 @@ import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
 import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list'
-
 export default defineConfig({
   name: 'default',
   title: 'DevinovaHome',
@@ -17,7 +16,9 @@ export default defineConfig({
         return S.list()
           .title('Content')
           .items(
-            schemaTypes.map((type) => orderableDocumentListDeskItem({type: type.name, S, context})),
+            schemaTypes
+              .filter((type) => type.type === 'document')
+              .map((type) => orderableDocumentListDeskItem({type: type.name, S, context})),
           )
       },
     }),

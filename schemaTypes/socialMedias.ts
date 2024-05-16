@@ -5,7 +5,7 @@ export default {
       {
         name: 'label',
         type: 'string',
-        title: 'Label',
+        title: 'Social Medias',
         options: {
             list: [
                 {title: 'Facebook', value: 'FaFacebook'},
@@ -24,11 +24,6 @@ export default {
         name: 'url',
         type: 'string',
         title: 'Url',
-      },
-      {
-        name: 'icon',
-        type: 'string',
-        title: 'icon',
       }
     ],
   }

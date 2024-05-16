@@ -11,13 +11,13 @@ export default {
     {
       name: 'label',
       type: 'string',
-      title: 'Name of Company',
+      title: 'Company Name',
       validation: (rule: Rule) => rule.required().min(1),
     },
     {
       name: 'phone',
       type: 'string',
-      title: 'Phone number',
+      title: 'Phone Number',
     },
     {
       name: 'email',
@@ -26,26 +26,11 @@ export default {
     },
     {
       name: 'address',
-      type: 'object',
+      type: 'array',
       title: 'Address',
-      fields: [
+      of: [
         {
-          name: 'street',
-          type: 'string',
-          title: 'Street',
-          validation: (rule: Rule) => rule.min(1).warning('must be more than one character'),
-        },
-        {
-          name: 'zipCode',
-          type: 'string',
-          title: 'Zip Code',
-          validation: (rule: Rule) => rule.min(1).warning('must be more than one character'),
-        },
-        {
-          name: 'city',
-          type: 'string',
-          title: 'City',
-          validation: (rule: Rule) => rule.min(1).warning('must be more than one character'),
+          type: 'address',
         },
       ],
     },
